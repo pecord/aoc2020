@@ -1,2 +1,10 @@
-found solution:  914  +  1106  =  2020 , solution 1010884
 found solution:  1106  +  914  =  2020 , solution 1010884
+found solution:  914  +  1106  =  2020 , solution 1010884
+part one: 7.702ms
+found solution:  401  +  958  +  661  =  2020 , solution 253928438
+found solution:  401  +  661  +  958  =  2020 , solution 253928438
+found solution:  958  +  401  +  661  =  2020 , solution 253928438
+found solution:  958  +  661  +  401  =  2020 , solution 253928438
+found solution:  661  +  401  +  958  =  2020 , solution 253928438
+found solution:  661  +  958  +  401  =  2020 , solution 253928438
+part two: 46.823ms

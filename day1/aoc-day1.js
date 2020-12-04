@@ -2,15 +2,29 @@ let numbers = [1065,1227,329,1063,1889,1700,1805,1373,389,1263,1276,1136,1652,19
 
 // find two number that equal 2020
 // we could go through the list twice, once for each number compared to every other number
-// console.time("first method")
-// for (let number of numbers) {
-//   for (let number2 of numbers) {
-//     if ( number + number2 === 2020) {
-//       console.log("found solution: ", number, " + ", number2, " = ", number+number2, ", solution", number*number2)
-//     }
-//   }
-// }
-// console.time("first method")
+console.time("part one")
+for (let number of numbers) {
+  for (let number2 of numbers) {
+    if ( number + number2 === 2020) {
+      console.log("found solution: ", number, " + ", number2, " = ", number+number2, ", solution", number*number2)
+    }
+  }
+}
+console.timeEnd("part one")
+
+console.time("part two")
+for (let number of numbers) {
+  for (let number2 of numbers) {
+    for (let number3 of numbers) {
+      if ( number + number2 + number3 === 2020) {
+        console.log("found solution: ", number, " + ", number2, " + ", number3, " = ", number+number2+number3, ", solution", number*number2*number3)
+      }
+    }
+  }
+}
+console.timeEnd("part two")
+
+
 
 // WIP
 // or we could (with a sorted list) start at the min and max and work from both ends
@@ -19,4 +33,4 @@ let numbers = [1065,1227,329,1063,1889,1700,1805,1373,389,1263,1276,1136,1652,19
 // - if we get below 2020 we know there are no combinations that will work with this number
 // checkNumbers(0, sortedNumbersAsc.length - 1)
 
-let sortedNumbersAsc = numbers.sort((a, b) => a - b)
+// let sortedNumbersAsc = numbers.sort((a, b) => a - b)
