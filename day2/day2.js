@@ -1020,7 +1020,33 @@ for (let passwordTest of passwordTests) {
     // console.log("test works", passwordTest)
     workingPasswords.push(passwordTest)
   }
-
 }
 
 console.log("part one number of working passwords", workingPasswords.length)
+
+workingPasswords = []
+
+// check if the password is valid
+// first part is where the letter must appear 1-8 w: = first letter or 8th letter must be w
+// the second part is the letter to test
+// the third part is the password
+
+for (let passwordTest of passwordTests) {
+  let [test, letter, password] = passwordTest.split(" ")
+  let [firstLetterIndex, secondLetterIndex] = test.split("-").map(Number)
+
+  letter = letter.replace(":", "")
+
+  let firstLetterToTest = password[firstLetterIndex-1]
+  let secondLetterToTest = password[secondLetterIndex-1]
+
+  let testOne = firstLetterToTest == letter
+  let testTwo = secondLetterToTest == letter
+  let result =  (testOne || testTwo) && !(testOne && testTwo)
+
+  if (result) {
+    // console.log("test works", passwordTest)
+    workingPasswords.push(passwordTest)
+  }
+}
+console.log("part two number of working passwords", workingPasswords.length)
